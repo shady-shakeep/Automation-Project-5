@@ -120,12 +120,12 @@ describe('Issue create', () => {
           .trigger('click');
   
       //Type value to description input field
-    cy.get('.ql-editor').type('Santa Claus'); 
+    cy.get('.ql-editor').type('Shady Shakeep'); 
   
       //Type value to title input field
         //Order of filling in the fields is first description, then title on purpose
         //Otherwise filling title first sometimes doesn't work due to web page implementation
-    cy.get('input[name="title"]').type('Santa'); 
+    cy.get('input[name="title"]').type('Shady'); 
           
       //Select Baby Yoda from reporter dropdown
     cy.get('[data-testid="select:reporterId"]').click();
@@ -156,7 +156,7 @@ describe('Issue create', () => {
         .should('have.length', '5')
         .first()
         .find('p')
-        .contains('Santa');
+        .contains('Shady');
      });
     });
   
